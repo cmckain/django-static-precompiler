@@ -117,6 +117,8 @@ class BaseCompiler:
         """
         if settings.DISABLE_AUTO_COMPILE and not from_management:
             return False
+        if settings.FORCE_AUTO_COMPILE:
+            return True
 
         compiled_mtime = self.get_output_mtime(source_path)
 
