@@ -22,6 +22,7 @@ COMPILERS = getattr(
         "static_precompiler.compilers.LESS",
         "static_precompiler.compilers.Stylus",
         "static_precompiler.compilers.LiveScript",
+        "static_precompiler.compilers.TypeScript",
     ),
 )
 
@@ -47,4 +48,5 @@ CACHE_NAME = getattr(settings, "STATIC_PRECOMPILER_CACHE_NAME", None)
 PREPEND_STATIC_URL = getattr(settings, "STATIC_PRECOMPILER_PREPEND_STATIC_URL", False)
 
 DISABLE_AUTO_COMPILE = getattr(settings, "STATIC_PRECOMPILER_DISABLE_AUTO_COMPILE", False)
+FORCE_AUTO_COMPILE = getattr(settings, "STATIC_PRECOMPILER_FORCE_AUTO_COMPILE", False)
 FINDER_LIST_FILES = getattr(settings, "STATIC_PRECOMPILER_FINDER_LIST_FILES", False)
